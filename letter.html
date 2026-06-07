@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For Neeharika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  background: radial-gradient(circle at top, #e6f3ff, #d6ecff, #f4f9ff);
+  overflow-x: hidden;
+}
+
+/* floating hearts */
+.hearts-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hearts-bg span {
+  position: absolute;
+  bottom: -50px;
+  color: rgba(120, 170, 255, 0.25);
+  font-size: 20px;
+  animation: floatUp linear infinite;
+}
+
+.hearts-bg span:nth-child(1) { left: 10%; animation-duration: 12s; }
+.hearts-bg span:nth-child(2) { left: 25%; animation-duration: 16s; }
+.hearts-bg span:nth-child(3) { left: 40%; animation-duration: 14s; }
+.hearts-bg span:nth-child(4) { left: 55%; animation-duration: 18s; }
+.hearts-bg span:nth-child(5) { left: 70%; animation-duration: 15s; }
+.hearts-bg span:nth-child(6) { left: 85%; animation-duration: 17s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+.scene {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ENVELOPE */
+.envelope-wrap {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.envelope-wrap.open {
+  transform: translateY(-10px);
+}
+
+.envelope {
+  width: 420px;
+  height: 260px;
+  position: relative;
+  background: linear-gradient(145deg, #8ec5ff, #6fb4ff);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.env-flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  background: #d6ecff;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform-origin: top;
+  transition: 0.7s ease;
+}
+
+.envelope-wrap.open .env-flap {
+  transform: rotateX(180deg);
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.envelope-wrap.open .heart {
+  opacity: 0;
+}
+
+/* LETTER */
+.letter-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+  margin-top: 25px;
+}
+
+.letter-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.letter-paper {
+  background: white;
+  padding: 55px 50px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 2.2;
+  white-space: pre-wrap;
+}
+
+/* PHOTO */
+.photo-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.photo-wrap img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.caption {
+  margin-top: 2px;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  color: #4d6fa8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts-bg">
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+</div>
+
+<div class="scene">
+
+  <div class="envelope-wrap" id="env">
+    <div class="envelope">
+      <div class="env-flap"></div>
+      <div class="heart">♥</div>
+    </div>
+  </div>
+
+  <div class="letter-container" id="letter">
+    <div class="letter-paper">
+
+Dear Neeharika, 
+
+I genuinely don’t know where to start, because I have so much to say and none of it feels big enough to hold what I actually mean. Coming into UW Junoon as a freshman, I had no idea what to expect, and I definitely didn’t expect to find you. Somehow, without either of us really planning it, we just got close. It happened so naturally that I can’t even pinpoint the moment. It just feels like I’ve known you for years, like you were always supposed to be in my life.
+
+What gets me is that you somehow managed to become both the older sibling I never knew I needed and the most caring person in the room. You’ll genuinely sit there and listen to me complain about something completely stupid for hours and never once make me feel like a burden. You make sure we’re fed. You always make time to hang out, even when life is busy. And at the same time, you’re also the person who will look at me mid-complaint and go, “Okay, I’m taking your phone. Go study.” Somehow, that’s love, too. I’m lucky to have a real friend who genuinely wants good things for me. You’ve never let me slack; you’re always so open with your advice, and that’s something I really appreciate. 
+
+I mean all of that more literally than you probably know. I still can’t believe you came to my marketing presentation. It was such a small, unimportant thing compared to everything else going on with school and life, and I never expected you to show up, but you did. I don’t think you realize how much that meant to me. Growing up, my parents weren’t always able to make it to my events or big moments because of family responsibilities and health issues, and I didn’t fully realize how much that stayed with me until that moment. Seeing you there, when you had absolutely no reason to be, meant more than I could ever explain.
+
+Your apartment became my second home this quarter, and you never once made me feel like I was overstaying. There's never been a moment where I felt unwelcome; your door was always open. I don’t think you realize what that meant to me. To just belong somewhere like that.
+
+In your letter to me, you wrote about the ways I’ve helped you, and maybe I have. But whatever small ways I’ve been there for you, you’ve given it back to me tenfold. You’ve helped me more than you know, in how I carry myself, in how I show up for people, and in what I think I deserve in a friendship. Being cared for by you so consistently has genuinely changed me for the better.
+
+As you move forward into your job, your master’s, and everything that’s waiting for you, I want you to know that I’ll be your loudest cheerleader from wherever I am. Whatever you’re chasing, I already believe in you completely. And I’m not going anywhere either. You’re stuck with me showing up at your door, probably still complaining about something, for a very long time.
+
+Thank you for being exactly who you are. I love you more than I know how to say.
+
+(I’m not the best at these. I already know that after this, I’m going to think, “omg, I should’ve said this too.” I think that just shows how many amazing things there are to say about you, and why you should never change, hehe. Ily. Also, sorry this isn’t handwritten — my wrists are cooked rn, and I have no dinero to print this out, so hopefully you save this link forever… or maybe download it LOL.)
+
+Sincerely,
+Shreya Hande
+
+<div class="photo-wrap">
+  <img src="DSC04826.JPG" alt="memory">
+  <div class="caption">us ♥</div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+const env = document.getElementById("env");
+const letter = document.getElementById("letter");
+
+env.addEventListener("click", () => {
+  env.classList.toggle("open");
+  letter.classList.toggle("visible");
+});
+</script>
+
+</body>
+</html>
